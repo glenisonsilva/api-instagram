@@ -1,0 +1,7 @@
+<div ng-if="!isLoggedIn()" ng-include="'/apiinstagram/templates/views/login.html'" 
+ng-controller="loginController">
+</div>
+
+<div ng-if="isLoggedIn()" ng-include="'/apiinstagram/templates/views/followed.html'"
+ng-controller="followedController">
+</div>

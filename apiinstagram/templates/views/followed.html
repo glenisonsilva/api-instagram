@@ -1,0 +1,82 @@
+<script type="text/javascript">
+    ////////// Back to Top //////////
+    $(function() {
+    $(window).scroll(function() {
+        if($(this).scrollTop() != 0) {
+            $('#toTop').fadeIn();   
+        } else {
+            $('#toTop').fadeOut();
+        }
+    });
+ 
+    $('#toTop').click(function() {
+        $('body,html').animate({scrollTop:0},800);
+    }); 
+});
+</script>
+
+<header class=" background">
+    <ul class="nav nav-tabs">
+      <li class="active"><a href="#">Home</a></li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a ng-click="logout()">Logout</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="col-md-12 col-sm-12 col-lg-12">
+        <img class="profile" src="{{user.profile_picture}}" />
+        <h3>{{user.full_name}}</h3>
+        <p class="lead">Followed By: {{user.counts.followed_by}}</p>
+        <p class="lead">Follows: {{user.counts.follows}}</p>
+        <p class="lead">Media: {{user.counts.media}}</p>
+    </div>  
+</header> 
+<div class="container"><!-- Begin Container -->
+    <div class="row headline"><!-- Begin Headline -->       
+        <div class="row gallery-row" infinite-scroll='nextPage()' infinite-scroll-disabled='busy' infinite-scroll-distance='1'><!-- Begin Gallery Row -->          
+            <div class="col-md-12">
+                <h5 class="title-bg">FOLLOWS</h5>            
+                <div class="row clearfix no-margin">
+                    <!-- Gallery Item 1 -->
+                    <div ng-repeat="f in follows" class="center col-md-4 col-sm-12 col-lg-3 gallery-item" data-id="id-1" data-type="illustration">
+                        <img class="profile img-responsive " alt="Responsive image" src="{{f.profile_picture}}" >           
+                        <span class="font-shadow lead">{{f.full_name}}</span>
+                    </div>
+                </div>
+            </div>             
+        </div><!-- End Gallery Row -->
+        <!-- Loader -->
+        <div class="overlay-loader" ng-show="busy">
+            <div class="loader">
+                <div></div>           
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div> 
+    </div>   
+</div> <!-- End Container -->
+<footer  class="footer-container"><!-- Begin Footer -->  
+    <div class="col-sm-6 col-sm-offset-3 social-login">
+        <div class="social-login-buttons">
+            <a class="btn btn-link-2" href="https://www.facebook.com/glenison.honoriosilva">
+                <i class="fa fa-facebook"></i> Facebook
+            </a>
+            <a class="btn btn-link-2" href="https://www.instagram.com/glenison_honorio/">
+                <i class="fa fa-instagram"></i> Instagram
+            </a>
+            <a class="btn btn-link-2" href="https://plus.google.com/u/0/112886401707533619321/posts">
+                <i class="fa fa-google-plus"></i> Google Plus
+            </a>
+        </div>
+    </div>   
+</footer><!-- End Footer -->    
+    <!-- Scroll to Top -->  
+<div id="toTop" class="hidden-phone hidden-tablet">Back to Top</div>
+    

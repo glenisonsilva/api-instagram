@@ -1,0 +1,44 @@
+<!doctype html5>
+<html ng-app="app">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="content-language" content="pt-br" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <link rel="shortcut icon" href="/apiinstagram/imgs/favicon.ico">
+        <!--Css-->
+        <link href="/apiinstagram/css/site.css" rel="stylesheet" />
+        <link href="/apiinstagram/css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+        <link href="/apiinstagram/css/bootstrap/bootstrap-theme.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> 
+        <!--  -->
+
+        <title>Front-End Developer - IdTrust</title>
+         <!-- inject:js -->
+         <!-- Libs -->
+        <script src="/apiinstagram/libs/jquery/dist/jquery.min.js"></script>
+        <script src="/apiinstagram/libs/angular/angular.min.js"></script>
+        <script src="/apiinstagram/libs/angular/i18n/angular-locale_pt-br.js"></script>
+        <script src="/apiinstagram/libs/angular/angular-ui-router.min.js"></script>
+        <script src="/apiinstagram/libs/angular/ng-scroll.js"></script>
+        <script src="/apiinstagram/libs/angular/angular-cookies.js"></script>
+        <script src="/apiinstagram/libs/bootstrap/js/bootstrap.min.js"></script>
+        <script src="/apiinstagram/js/script.js"></script>
+        <script src="/apiinstagram/js/app.js"></script>
+        <!-- Services -->
+        <script src="/apiinstagram/js/services/instagram-service.js"></script>
+        <script src="/apiinstagram/js/services/instagram-provider.js"></script>
+        <!-- Controllers -->
+        <script src="/apiinstagram/js/controllers/authenticationController.js"></script>
+        <script src="/apiinstagram/js/controllers/homeController.js"></script>
+        <script src="/apiinstagram/js/controllers/loginController.js"></script>
+        <script src="/apiinstagram/js/controllers/followedController.js"></script>
+        <script src="/apiinstagram/js/routes.js"></script>
+         <!-- endinject --> 
+     </head>
+    <body>                    
+        <div  ui-view ng-animate="{enter: 'animate-enter'}">
+            <!-- Content -->
+        </div>
+    </body>
+</html>
+    
