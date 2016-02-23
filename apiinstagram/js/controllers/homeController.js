@@ -15,8 +15,6 @@
 		     return false;
 		    }
     	};
-    	//console.log("indexcontroller");
-    	//console.log(instagramService.isLoggedIn()); //retorna dados do login $rootScope.globals.currentUser
 	}
 	
 }());
