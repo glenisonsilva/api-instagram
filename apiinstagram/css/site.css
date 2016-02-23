@@ -254,7 +254,9 @@ a, a:hover, a:focus {
   text-align: left;
 }
 
-
+.nav {
+  cursor: pointer;
+}
 
 
 
